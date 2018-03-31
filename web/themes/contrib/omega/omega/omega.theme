@@ -250,10 +250,17 @@ function omega_preprocess_page(&$vars) {
   $layouts = omega_return_layouts($layoutTheme);
   $region_groups = $layouts[$layoutLayout]['region_groups']['all'];
   foreach($region_groups as $group_id => $group_info) {
-    $groupRegions = $region_groups[$group_id]['regions'];
+    if (is_null($region_groups[$group_id]['regions'])) {
+
+      $groupRegions = $region_groups[$group_id]['regions'];
+    }
+    else {
+      return;
+    }
     // duplciate the #id into a class for better use with Omega.gs
     $altered_group_id = str_replace("_", "-", $group_id);
     $region_classes[$group_id][] = $altered_group_id . '-layout';
+
     foreach($groupRegions as $region_id => $region_info) {
       $altered_region_id = str_replace("_", "-", $region_id);
       
