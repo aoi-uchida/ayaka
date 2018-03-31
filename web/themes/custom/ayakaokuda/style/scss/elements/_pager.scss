@@ -1,0 +1,13 @@
+.pager {
+  margin: 10px auto 30px;
+  .pager__items {
+    .pager__item {
+
+    }
+    .pager__item.is-active {
+      a {
+        color: #fe7d4a;
+      }
+    }
+  }
+}

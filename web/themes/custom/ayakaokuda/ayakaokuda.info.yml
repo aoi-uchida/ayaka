@@ -1,0 +1,34 @@
+name: Ayaka Okuda
+type: theme
+description: ''
+package: Core
+# version: VERSION
+base theme: omega
+# core: 8.x
+force_export: false
+inherit_layout: false
+scss_support: true
+libraries:
+  - ayakaokuda/ayakaokuda
+regions:
+  header: Header
+  navigation_top: Navigation Top
+  navigation: Navigation
+  page_top: Page Top
+  content: Content
+  footer: Footer
+features:
+  logo: true
+  name: true
+  slogan: false
+  node_user_picture: false
+  comment_user_picture: false
+  comment_user_verification: false
+  favicon: true
+  main_menu: true
+  secondary_menu: false
+# Information added by Drupal.org packaging script on 2016-07-25
+version: '8.x-5.0-alpha7'
+core: '8.x'
+project: 'omega'
+datestamp: 1469485442

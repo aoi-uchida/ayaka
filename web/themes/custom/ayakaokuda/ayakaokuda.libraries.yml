@@ -1,0 +1,40 @@
+ayakaokuda:
+  omega:
+    allow_clone_for_subtheme: true
+    allow_enable_disable: true
+    title: 'Default library for ayakaokuda.'
+    description: 'Default Omega subtheme library description. Please provide a more meaningful description (and title) for this library by editing the ayakaokuda.libraries.yml file.'
+    scss: 
+      style/css/ayakaokuda.css: 'style/scss/ayakaokuda.scss'
+  version: VERSION
+  js:
+    # Custom Javascript file for your own JS modifications.
+    # Examples of behaviors in JS file.
+    js/ayakaokuda.js: {}
+    js/vendor/jquery.googlemap.js: {}
+    js/vendor/jquery.magnific-popup.min.js: {}
+
+  dependencies:
+    - core/modernizr
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+
+  css:
+    theme:
+      # Custom CSS file to be loaded in all media circumstances
+      style/css/ayakaokuda.css: {}
+      icomoon/style.css: {}
+      style/css/vendor/magnific-popup.css: {}
+
+font-awesome:
+  remote: https://fortawesome.github.io/Font-Awesome/
+  version: 4.5.0
+  license:
+    name: MIT
+    url: https://fortawesome.github.io/Font-Awesome/license/
+    gpl-compatible: true
+  css:
+    theme:
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css: { type: external, minified: true }

@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the theme.
+ */
+function ayakaokuda_preprocess_page(&$variables) {
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $e) {
+    $variables['is_front'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function ayakaokuda_preprocess_block(&$variables) {
+
+  $variables['base_path'] = base_path();
+}
