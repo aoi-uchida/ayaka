@@ -1,0 +1,90 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+<article>
+  <div class="schedule-wrapper page-container" id="schedule">
+    {{ title_prefix }}
+    {% if label %}
+      <h1 class="article-title">{{ label }}</h1>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      <div class="schedule-wrap">
+        <div class="tab-wrap">
+          <!-- TAB CONTROLLERS -->
+          <!-- <input id="mon" class="panel-radios" type="radio" name="tab-radios"> -->
+          <input id="tue" class="panel-radios" type="radio" name="tab-radios" checked="">
+          <input id="wed" class="panel-radios" type="radio" name="tab-radios">
+          <input id="thu" class="panel-radios" type="radio" name="tab-radios">
+          <input id="fri" class="panel-radios" type="radio" name="tab-radios">
+          <input id="sat" class="panel-radios" type="radio" name="tab-radios">
+          <input id="sun" class="panel-radios" type="radio" name="tab-radios">
+          <input id="nav-ctrl" class="panel-radios" type="checkbox" name="nav-checkbox">
+
+          <!-- TABS MENU -->
+          <ul class="tab-menu">
+            <label class="open-nav-label" for="nav-ctrl"></label>
+            <li class="li-for-mon">
+              <label class="tab-label" for="mon">月<span>Mon</span></label>
+            </li>
+            <li class="li-for-tue">
+              <label class="tab-label" for="tue">火<span>Tue</span></label>
+            </li>
+            <li class="li-for-wed">
+              <label class="tab-label" for="wed">水<span>Wed</span></label>
+            </li>
+            <li class="li-for-thu">
+              <label class="tab-label" for="thu">木<span>Thu</span></label>
+            </li>
+            <li class="li-for-fri">
+              <label class="tab-label" for="fri">金<span>Fri</span></label>
+            </li>
+            <li class="li-for-sat">
+              <label class="tab-label" for="sat">土<span>Sat</span></label>
+            </li>
+            <li class="li-for-sun">
+              <label class="tab-label" for="sun">日・祝<span>Irregular</span></label>
+            </li>
+          </ul>
+
+          <!-- TABS HEAD -->
+          <ul class="tab-head">
+            <li class="sc-head-category"></li>
+            <li class="sc-head-time">Time</li>
+            <li class="sc-head-lesson">Lesson</li>
+            <li class="sc-head-located">located</li>
+          </ul>
+          <div class="tab-content" style="height: 480px;">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+</article>

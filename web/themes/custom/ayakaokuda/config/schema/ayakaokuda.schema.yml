@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Omega theme.
+
+ayakaokuda.settings:
+  type: theme_settings
+  label: 'Ayaka Okuda Settings'

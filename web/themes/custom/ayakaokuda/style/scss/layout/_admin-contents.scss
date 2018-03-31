@@ -1,0 +1,105 @@
+/*===== Admin Contents =====*/
+.admin-contents .content {
+  padding: 20px 35px;
+}
+
+.admin-contents .view-filters {
+  background-color: #eee;
+  padding: 15px 10px;
+}
+
+.admin-contents #views-form-content-page-1 {
+  padding: 25px 10px;
+}
+
+.admin-contents .views-exposed-form div.form--inline.clearfix {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-contents .form-item,
+.admin-contents .form-actions {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.admin-contents .form-type-checkbox {
+  margin-bottom: 0;
+}
+
+.admin-contents .views-exposed-form label,
+.admin-contents #views-form-content-page-1 label {
+  display: inline-block;
+  min-width: 140px;
+}
+
+.admin-contents .views-exposed-form .form-type-textfield label {
+  font-weight: normal;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+.admin-contents .form-type-textfield input {
+  width: auto;
+  max-width: none;
+  padding: initial;
+  font-size: 1em;
+  font-weight: normal;
+  border: 1px solid #878787;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.admin-contents .views-exposed-form .form-submit,
+.admin-contents #views-form-content-page-1 .form-submit {
+  width: 200px;
+  padding: 0.1em;
+  border: 1px solid #878787;
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(100, 100, 100, 0.5);
+  -moz-box-shadow: 1px 1px 1px 0 rgba(100, 100, 100, 0.5);
+  box-shadow: 1px 1px 1px 0 rgba(100, 100, 100, 0.5);
+}
+
+.admin-contents #views-form-content-page-1 .form-submit {
+  margin-bottom: 30px;
+}
+
+.admin-contents #views-form-content-page-1 .form-submit:last-child {
+  display: none;
+}
+
+.admin-contents table.views-table {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-contents table.views-table tr {
+  border-top: 1px solid #eee;
+}
+
+.admin-contents table.views-table th,
+.admin-contents table.views-table td {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+.admin-contents table.views-table .form-type-checkbox,
+.admin-contents table.views-table td.views-field-status,
+.admin-contents table.views-table td.views-field-changed {
+  text-align: center;
+}
+
+.admin-contents table.views-table td.views-field-title,
+.admin-contents table.views-table td.views-field-type,
+.admin-contents table.views-table td.views-field-name {
+  padding-left: 10px;
+}
+
+.admin-contents table.views-table .views-field-operations .dropbutton-multiple {
+  padding-right: 1.1em;
+  padding-top: 1px;
+}

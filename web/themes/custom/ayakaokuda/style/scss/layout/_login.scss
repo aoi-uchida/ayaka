@@ -1,0 +1,27 @@
+/*===== Login =====*/
+.path-user {
+  padding-top: 80px;
+  section#content-wrapper.content {
+    padding: 100px;
+  }
+
+  .form-type-password .description {
+    margin-top: 0.5em;
+    color: #8d8d8d;
+  }
+
+  .path-user input#edit-pass{
+    width: 100%;
+    max-width: 100%;
+    padding: 0.35em 0.5em;
+    font-size: 1.2em;
+    font-weight: normal;
+    border: 2px solid #FAFAFA;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  }
+}

@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Default view template to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ *
+ * @ingroup themeable
+ */
+#}
+{#
+-category
+  - 1 : aero
+  - 2 : yoga
+  - 3 : combat
+  - 4 : other
+#}
+{% if fields.field_category.content == '1' %}
+  {% set category = 'sc-1' %}
+{% elseif fields.field_category.content == '2' %}
+  {% set category = 'sc-2' %}
+{% elseif fields.field_category.content == '3' %}
+  {% set category = 'sc-3' %}
+{% else %}
+  {% set category = 'sc-4' %}
+{% endif %}
+
+<li class="tab-item">
+  <div class="sc-category {{ category }}"></div>
+  <div class="sc-time"><time>{{- fields.field_start_time.content -}}<span class="sc-endtime">〜{{- fields.field_end_time.content -}}</span></time></div>
+  <div class="sc-lesson">
+    <div class="sc-lesson-p">{{- fields.field_lesson_name.content -}}</div>
+  </div>
+  <div class="sc-locate-city">{{- fields.field_city.content -}}</div>
+  <div class="sc-locate-place">{{- fields.field_lesson_location.content -}}</div>
+  <div class="sc-map-btn"><a class="g-maps" href="">map</a></div>
+  <div class="mfp-inline mfp-hide">{{- fields.field_map.content -}}</div>
+</li>

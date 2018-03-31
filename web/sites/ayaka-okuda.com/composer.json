@@ -1,0 +1,5 @@
+{
+    "require-dev": {
+        "drupal/devel": "1.0-alpha1"
+    }
+}
